@@ -1,16 +1,13 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { MaterialModule } from '../material.module';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { RouterModule } from "@angular/router";
+
+import { MaterialModule } from "../material.module";
+import { NavbarComponent } from "./navbar/navbar.component";
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule,
-    MaterialModule
-  ],
-  exports: [
-    CommonModule,
-    MaterialModule
-  ]
+  declarations: [NavbarComponent],
+  imports: [CommonModule, MaterialModule, RouterModule],
+  exports: [CommonModule, MaterialModule, NavbarComponent, RouterModule]
 })
-export class SharedModule { }
+export class SharedModule {}
